@@ -1,0 +1,23 @@
+--SELECT <column1>,<column2>
+--FROM <schema>.<table>
+--WHERE <column>  BETWEEN <value1> AND <value2>;
+
+
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE OrderDate  BETWEEN '2011-06-18' AND '2011-06-28'
+
+
+--2
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE CustomerID  BETWEEN 13264 AND 16529;
+--3
+SELECT BusinessEntityID, JobTitle
+FROM HumanResources.Employee
+WHERE JobTitle  BETWEEN 'B' and 'F';
+
+--4 An illogical BETWEEN expression
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE CustomerID  BETWEEN 29005 AND 29000;

@@ -1,0 +1,60 @@
+USE [AdventureWorks2019]
+Go
+--1
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > '2011-06-27 00:00:00.000';
+
+--2
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE OrderDate < '2011-06-29 00:00:00.000';
+--3
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE OrderDate >= '2011-06-29 00:00:00.000';
+--4
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE OrderDate <> '2011-06-29 00:00:00.000';
+--5
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE OrderDate != '2011-06-29 00:00:00.000';
+
+--Using a number column
+--6
+SELECT SalesOrderID, SalesOrderDetailID, OrderQty
+FROM Sales.SalesOrderDetail
+WHERE OrderQty > 6;
+--7
+SELECT SalesOrderID, SalesOrderDetailID, OrderQty
+FROM Sales.SalesOrderDetail
+WHERE OrderQty <= 6;
+--8
+SELECT SalesOrderID, SalesOrderDetailID, OrderQty
+FROM Sales.SalesOrderDetail
+WHERE OrderQty <> 6;
+--9
+SELECT SalesOrderID, SalesOrderDetailID, OrderQty
+FROM Sales.SalesOrderDetail
+WHERE OrderQty != 6;
+
+--Using a string column
+--10
+SELECT BusinessEntityID, FirstName
+FROM Person.Person
+WHERE FirstName <> 'Adam';
+--11
+SELECT BusinessEntityID, FirstName
+FROM Person.Person
+WHERE FirstName != 'Adam';
+
+--12
+SELECT BusinessEntityID, FirstName
+FROM Person.Person
+WHERE FirstName > 'C';
+--13
+SELECT BusinessEntityID, FirstName
+FROM Person.Person
+WHERE FirstName !> 'C';

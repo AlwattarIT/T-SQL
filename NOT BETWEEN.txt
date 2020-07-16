@@ -1,0 +1,23 @@
+--SELECT <column1>,<column2>
+--FROM <schema>.<table>
+--WHERE <column> NOT BETWEEN <value1> AND <value2>;
+
+
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE OrderDate NOT BETWEEN '2011-06-18' AND '2011-06-28'
+
+
+--2
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE CustomerID NOT BETWEEN 13264 AND 16529;
+--3
+SELECT BusinessEntityID, JobTitle
+FROM HumanResources.Employee
+WHERE JobTitle NOT BETWEEN 'B' and 'F';
+
+--4 An illogical BETWEEN expression
+SELECT CustomerID, SalesOrderID, OrderDate
+FROM Sales.SalesOrderHeader
+WHERE CustomerID NOT BETWEEN 29005 AND 29000;

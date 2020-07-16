@@ -1,0 +1,21 @@
+CREATE TABLE #DateTimeExample(
+ID INT NOT NULL IDENTITY PRIMARY KEY,
+AlwattarIT_Date DATETIME2(0) NOT NULL,
+AlwattarIT_Value VARCHAR(25) NOT NULL
+);
+GO
+INSERT INTO #DateTimeExample
+(AlwattarIT_Date,AlwattarIT_Value)
+VALUES ('2020-01-02 11:30','Hammer'),
+('2020-01-03 12:00','Driver'),
+('2020-01-03 12:10','Table'),
+('2020-01-03 19:35','Chair');
+
+--1
+SELECT ID, AlwattarIT_Date, AlwattarIT_Value
+FROM #DateTimeExample
+WHERE AlwattarIT_Date = '2020-01-03';
+--2
+SELECT ID, AlwattarIT_Date, AlwattarIT_Value
+FROM #DateTimeExample
+WHERE AlwattarIT_Date BETWEEN '2020-01-03 00:00:00' AND '2020-01-03 23:59:59';
