@@ -1,0 +1,51 @@
+--1
+SELECT BusinessEntityID, FirstName, MiddleName, LastName
+FROM Person.Person
+WHERE FirstName = 'Adam' AND LastName = 'Adams';
+--2
+SELECT BusinessEntityID, FirstName, MiddleName, LastName
+FROM Person.Person
+WHERE FirstName = 'Adam' OR LastName = 'Adams';
+
+
+--1
+SELECT ID, AlwattarIT_Date, AlwattarIT_Value
+FROM #DateTimeExample
+WHERE AlwattarIT_Date >= '2020-01-03 12:10:00' AND AlwattarIT_Date < '2020-01-03 19:00:59';
+--2
+SELECT ID, AlwattarIT_Date, AlwattarIT_Value
+FROM #DateTimeExample
+WHERE AlwattarIT_Date >= '2020-01-03 12:10:00' OR AlwattarIT_Date < '2020-01-03 19:00:59';
+
+
+
+
+قناتنا الجديدة لاتنسى الأشتراك
+
+AlwattarIT channel
+https://www.youtube.com/c/AlwattarIT
+
+SQL Server 2019 
+-----------------------------------------
+https://www.youtube.com/watch?v=ZqcP3PU1kWw&list=PLsbhD1Fwe5drFXKCal6GcussHWAdJmMmw&index=2&t=0s
+
+HTML Playlist
+-------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5douGaq5HjhDvD7F9rsBcIWA
+
+
+Microsoft Transact SQL (T-SQL)
+-------------------------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5drf9-O0-s2-gsdvii_V0EAx
+
+
+السي شارب بأجزائه الثلاثه
+
+Course C#
+https://www.youtube.com/playlist?list=PL5H3smBFNEEgxWYd1-7UPG7f2HF7NjACu
+
+أسئلة مبرمجين وأجوبة من القلب
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5do8vfE5gRHDpHhBRtls957Q
+
+رابط مجموعتنا الجديدة على الفيسبوك...نرحب بالجميع
+https://bit.ly/AlwattarIT_F
