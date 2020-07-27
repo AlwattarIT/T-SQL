@@ -1,0 +1,54 @@
+--ISNULL(<value>,<replacement>)
+--COALESCE(<value1>,<value2>,…,<valueN>)
+
+--Kim  Abercrombie
+--Kim Abercrombie
+
+
+--1
+SELECT BusinessEntityID, FirstName + ' ' + ISNULL(MiddleName,'') +
+' ' + LastName AS "Full Name"
+FROM Person.Person;
+--2
+SELECT BusinessEntityID, FirstName + ISNULL(' ' + MiddleName,'') +
+' ' + LastName AS "Full Name"
+FROM Person.Person;
+--3
+SELECT BusinessEntityID, FirstName + COALESCE(' ' + MiddleName,'') +
+' ' + LastName AS "Full Name"
+FROM Person.Person;
+
+
+
+
+قناتنا الجديدة لاتنسى الأشتراك
+
+AlwattarIT channel
+https://www.youtube.com/c/AlwattarIT
+
+SQL Server 2019 
+-----------------------------------------
+https://www.youtube.com/watch?v=ZqcP3PU1kWw&list=PLsbhD1Fwe5drFXKCal6GcussHWAdJmMmw&index=2&t=0s
+
+HTML Playlist
+-------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5douGaq5HjhDvD7F9rsBcIWA
+
+
+Microsoft Transact SQL (T-SQL)
+-------------------------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5drf9-O0-s2-gsdvii_V0EAx
+
+
+السي شارب بأجزائه الثلاثه
+
+Course C#
+https://www.youtube.com/playlist?list=PL5H3smBFNEEgxWYd1-7UPG7f2HF7NjACu
+
+أسئلة مبرمجين وأجوبة من القلب
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5do8vfE5gRHDpHhBRtls957Q
+
+رابط مجموعتنا الجديدة على الفيسبوك...نرحب بالجميع
+https://bit.ly/AlwattarIT_F
+
+
