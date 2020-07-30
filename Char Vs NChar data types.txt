@@ -1,0 +1,120 @@
+--Character strings data types
+-------------------------------------------------------------------------------------------------------------------------------
+--Data Type	     |   Lower limit	                     |   Upper limit	                        |      Memory             |
+-----------------|---------------------------------------|------------------------------------------|-------------------------|
+--char   	     |	0 chars                          	 |     	8000 chars	                        |      n bytes            |
+-----------------|---------------------------------------|------------------------------------------|-------------------------|
+--varchar        |  0 chars                       	     |     	8000 chars	                        |      n bytes + 2 bytes  |
+-----------------|---------------------------------------|------------------------------------------|-------------------------|
+--varchar (max)	 |  0 chars 	                         |     2^31 chars	                        |      n bytes + 2 bytes  | 
+-----------------|---------------------------------------|------------------------------------------|-------------------------|
+--text   	     |  0 chars                              |     2,147,483,647 chars	                |      n bytes + 4 bytes  | 
+-----------------|---------------------------------------|------------------------------------------|-------------------------|
+
+
+--Unicode character string data types
+-------------------------------------------------------------------------------------------------------------------------
+--Data Type	     |   Lower limit	                     |   Upper limit	                 |      Memory               |
+-----------------|---------------------------------------|-----------------------------------|---------------------------|
+--nchar   	     |	0 chars                          	 |     	4000 chars	                 |      2 times n bytes      |
+-----------------|---------------------------------------|-----------------------------------|---------------------------|
+--nvarchar       |  0 chars                       	     |     	4000 chars	                 |2 times n bytes + 2 bytes  |
+-----------------|---------------------------------------|-----------------------------------|---------------------------|
+--ntext      	 |  0 chars 	                         |     1,073,741,823 char            |2 times the string length  | 
+-----------------|---------------------------------------|-----------------------------------|---------------------------|
+
+--CHAR(n)
+
+
+
+CREATE TABLE sql_server_char_data_type (
+    char_dt_col CHAR(3)
+);
+
+INSERT INTO sql_server_char_data_type (char_dt_col)
+VALUES    ('ABC');
+
+Select char_dt_col 
+FROM sql_server_char_data_type
+
+INSERT INTO sql_server_char_data_type (char_dt_col)
+VALUES
+    ('XYZ1');
+
+
+INSERT INTO sql_server_char_data_type (char_dt_col)
+VALUES
+    ('A');
+
+SELECT
+    char_dt_col,
+    LEN(char_dt_col) len,
+    DATALENGTH(char_dt_col) data_length
+FROM
+    sql_server_char_data_type;
+
+--Use char when the sizes of the column data entries are consistent.
+--Use varchar when the sizes of the column data entries vary considerably.
+--Use varchar(max) when the sizes of the column data entries vary considerably, and the string length might exceed 8,000 bytes.
+
+
+
+
+--NCHAR(n)
+
+CREATE TABLE sql_server_nchar_data_type (
+    nchar_dt_col NCHAR(1) NOT NULL
+);
+
+
+INSERT INTO sql_server_nchar_data_type (nchar_dt_col)
+VALUES
+    (N'あ');
+
+Select nchar_dt_col 
+FROM sql_server_nchar_data_type
+
+INSERT INTO sql_server_nchar_data_type (nchar_dt_col)
+VALUES
+    (N'チャネル'); 
+
+SELECT
+    nchar_dt_col,
+    len(nchar_dt_col) length,
+    DATALENGTH(nchar_dt_col) data_length
+FROM
+    sql_server_nchar_data_type;
+
+
+
+قناتنا الجديدة لاتنسى الأشتراك
+
+AlwattarIT channel
+https://www.youtube.com/c/AlwattarIT
+
+SQL Server 2019 
+-----------------------------------------
+https://www.youtube.com/watch?v=ZqcP3PU1kWw&list=PLsbhD1Fwe5drFXKCal6GcussHWAdJmMmw&index=2&t=0s
+
+HTML Playlist
+-------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5douGaq5HjhDvD7F9rsBcIWA
+
+
+Microsoft Transact SQL (T-SQL)
+-------------------------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5drf9-O0-s2-gsdvii_V0EAx
+
+
+السي شارب بأجزائه الثلاثه
+
+Course C#
+https://www.youtube.com/playlist?list=PL5H3smBFNEEgxWYd1-7UPG7f2HF7NjACu
+
+أسئلة مبرمجين وأجوبة من القلب
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5do8vfE5gRHDpHhBRtls957Q
+
+رابط مجموعتنا الجديدة على الفيسبوك...نرحب بالجميع
+https://bit.ly/AlwattarIT_F
+
+

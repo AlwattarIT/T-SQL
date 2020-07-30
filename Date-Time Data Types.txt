@@ -1,0 +1,139 @@
+--Date & Time data types
+---------------------------------------------------------------------------------------------------------
+--Data Type	     |   Storage size       |       Lower limit	     |    Upper limit       |
+-----------------|----------------------|------------------------|----------------------|
+--datetime	     |   8 bytes	        |    1753-01-01	         |     9999-12-31       |
+-----------------|----------------------|------------------------|----------------------|
+--smalldatetime	 |   4 bytes, fixed	    |    1900-01-01	         |     2079-06-06       |
+-----------------|----------------------|------------------------|----------------------|
+--date	         |   3 bytes, fixed	    |    0001-01-01          |     9999-12-31       | 
+-----------------|----------------------|------------------------|----------------------|
+--time           |   5 bytes            |    00:00:00.0000000    |    23:59:59.9999999  | 
+-----------------|----------------------|------------------------|----------------------|
+--datetimeoffset |   10 bytes           |    0001-01-01          |     9999-12-31       |
+-----------------|----------------------|------------------------|----------------------|
+--datetime2      |   6 bytes	        |    0001-01-01          |     9999-12-31       |  
+-----------------|----------------------|------------------------|----------------------|
+
+--DATETIME2
+--YYYY-MM-DD hh:mm:ss[.fractional seconds]
+
+CREATE TABLE cloth_colors (
+    color_id INT IDENTITY (1,1),
+    color_name VARCHAR (50) NOT NULL,
+    created_at DATETIME2
+);
+
+
+INSERT INTO cloth_colors (color_name, created_at)
+VALUES
+    ('Red', GETDATE()); 
+
+
+INSERT INTO cloth_colors (color_name, created_at)
+VALUES
+    ('Green', '2020-07-30 09:40:10');
+
+
+ALTER TABLE cloth_colors 
+ADD CONSTRAINT df_current_time 
+DEFAULT CURRENT_TIMESTAMP FOR created_at;
+
+INSERT INTO cloth_colors (color_name)
+VALUES
+    ('Blue');
+
+Select * 
+FROM cloth_colors
+
+--Date
+
+--YYYY-DD-MM
+USE AdventureWorks2019
+Go
+SELECT  SalesOrderID
+       ,OrderDate
+       ,Status
+       ,ModifiedDate
+  FROM Sales.SalesOrderHeader
+  WHERE OrderDate >'2011-06-18 00:00:00.000'
+  Order By OrderDate DESC;
+
+
+--Time
+--hh:mm:ss[.nnnnnnn]
+
+USE DataTypeTest
+Go
+CREATE TABLE doctorvisits (
+    visit_id INT  IDENTITY(1,1),
+    patient_name VARCHAR (50) NOT NULL,
+    phone VARCHAR (25),
+    clinic_id INT NOT NULL,
+    visit_on DATE NOT NULL,
+    start_at TIME (0) NOT NULL,
+    end_at TIME (0) NOT NULL,
+   
+);
+
+Go
+
+INSERT INTO doctorvisits (
+    patient_name,
+    phone,
+    clinic_id,
+    visit_on,
+    start_at,
+    end_at
+)
+VALUES
+    (
+        'Michael Joe',
+        '(579)-584-3546',
+        1,
+        '2020-07-30',
+        '09:10:00',
+        '09:30:00'
+    );
+Go
+
+Select * 
+FROM doctorvisits;
+
+
+قناتنا الجديدة لاتنسى الأشتراك
+
+AlwattarIT channel
+https://www.youtube.com/c/AlwattarIT
+
+SQL Server 2019 
+-----------------------------------------
+https://www.youtube.com/watch?v=ZqcP3PU1kWw&list=PLsbhD1Fwe5drFXKCal6GcussHWAdJmMmw&index=2&t=0s
+
+HTML Playlist
+-------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5douGaq5HjhDvD7F9rsBcIWA
+
+
+Microsoft Transact SQL (T-SQL)
+-------------------------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5drf9-O0-s2-gsdvii_V0EAx
+
+
+السي شارب بأجزائه الثلاثه
+
+Course C#
+https://www.youtube.com/playlist?list=PL5H3smBFNEEgxWYd1-7UPG7f2HF7NjACu
+
+أسئلة مبرمجين وأجوبة من القلب
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5do8vfE5gRHDpHhBRtls957Q
+
+رابط مجموعتنا الجديدة على الفيسبوك...نرحب بالجميع
+https://bit.ly/AlwattarIT_F
+
+
+
+
+
+
+

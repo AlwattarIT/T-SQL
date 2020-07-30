@@ -1,0 +1,76 @@
+--DECIMAL(p,s)
+----------------------------------
+--| Precision |	 Storage (bytes) |
+--|-----------|-------------------
+--|  1 – 9	  |        5         |
+--|  10-19	  |        9         |  
+--|  20-28	  |        13        | 
+--|  29-38	  |        17        |  
+----------------------------------
+
+
+--Either one
+--DECIMAL(10,2)
+--NUMERIC(10,2)
+
+CREATE TABLE sql_server_decimal_data_types (
+    dec_dt_col DECIMAL (8, 4),
+    num_dt_col NUMERIC (8, 2)
+);
+
+
+INSERT INTO sql_server_decimal_data_types (dec_dt_col, num_dt_col)
+VALUES
+    (10.05, 20.05);
+
+
+SELECT
+    dec_dt_col,
+    num_dt_col
+FROM
+   sql_server_decimal_data_types;
+
+
+--Rounding
+--(99.99999);
+
+--exceed the precision and scale specified in the column definition
+--Msg 8115, Level 16, State 8, Line 19
+--Arithmetic overflow error converting numeric to data type numeric
+--The statement has been terminated.
+INSERT INTO sql_server_decimal_data_types (dec_dt_col, num_dt_col)
+VALUES
+    (984293.999, 145212.345);
+	
+	
+	
+قناتنا الجديدة لاتنسى الأشتراك
+
+AlwattarIT channel
+https://www.youtube.com/c/AlwattarIT
+
+SQL Server 2019 
+-----------------------------------------
+https://www.youtube.com/watch?v=ZqcP3PU1kWw&list=PLsbhD1Fwe5drFXKCal6GcussHWAdJmMmw&index=2&t=0s
+
+HTML Playlist
+-------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5douGaq5HjhDvD7F9rsBcIWA
+
+
+Microsoft Transact SQL (T-SQL)
+-------------------------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5drf9-O0-s2-gsdvii_V0EAx
+
+
+السي شارب بأجزائه الثلاثه
+
+Course C#
+https://www.youtube.com/playlist?list=PL5H3smBFNEEgxWYd1-7UPG7f2HF7NjACu
+
+أسئلة مبرمجين وأجوبة من القلب
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5do8vfE5gRHDpHhBRtls957Q
+
+رابط مجموعتنا الجديدة على الفيسبوك...نرحب بالجميع
+https://bit.ly/AlwattarIT_F
+	
