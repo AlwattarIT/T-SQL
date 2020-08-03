@@ -1,0 +1,55 @@
+--REPLACE(<string value>,<string to replace>,<replacement>)
+
+SELECT LastName, REPLACE(LastName,'A','X') AS "Replace A",
+REPLACE(LastName,'A','XX') AS "Replace with 2 characters",
+REPLACE(LastName,'ab','') AS "Remove string"
+FROM Person.Person
+WHERE BusinessEntityID IN (293,2170,297,10263,15027);
+
+--2
+SELECT BusinessEntityID,LastName,MiddleName,
+REPLACE(LastName,'a',MiddleName) AS "Replace with MiddleName"
+FROM Person.Person
+WHERE BusinessEntityID IN (293,10263,10274,10314,10293);
+
+
+
+
+	   
+
+لا تنسى المشاركة بالنقاشات على القناة في جزء المجتمع من هذا الرابط
+https://www.youtube.com/c/AlwattarIT/community
+
+
+
+قناتنا الجديدة لاتنسى الأشتراك
+
+AlwattarIT channel
+https://www.youtube.com/c/AlwattarIT
+
+SQL Server 2019 
+-----------------------------------------
+https://www.youtube.com/watch?v=ZqcP3PU1kWw&list=PLsbhD1Fwe5drFXKCal6GcussHWAdJmMmw&index=2&t=0s
+
+HTML Playlist
+-------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5douGaq5HjhDvD7F9rsBcIWA
+
+
+Microsoft Transact SQL (T-SQL)
+-------------------------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5drf9-O0-s2-gsdvii_V0EAx
+
+
+السي شارب بأجزائه الثلاثه على قناتنا السابقة
+
+Course C#
+https://www.youtube.com/playlist?list=PL5H3smBFNEEgxWYd1-7UPG7f2HF7NjACu
+
+أسئلة مبرمجين وأجوبة من القلب
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5do8vfE5gRHDpHhBRtls957Q
+
+رابط مجموعتنا الجديدة على الفيسبوك...نرحب بالجميع
+https://bit.ly/AlwattarIT_F
+
+
