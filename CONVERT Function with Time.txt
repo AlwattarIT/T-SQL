@@ -1,0 +1,50 @@
+--CONVERT(<data type, usually varchar>,<date>,<style>)
+
+--1 Using Cast Function
+SELECT CAST(DATEPART(YYYY,GETDATE()) AS VARCHAR) + '/' +
+CAST(DATEPART(MM,GETDATE()) AS VARCHAR) +
+'/' + CAST(DATEPART(DD,GETDATE()) AS VARCHAR) AS DateCast;
+
+--2 Using Convert Function
+SELECT CONVERT(VARCHAR,GETDATE(),111) AS DateConvert;
+
+--3
+SELECT CONVERT(VARCHAR,OrderDate,1) AS "1_2digits_Year",
+CONVERT(VARCHAR,OrderDate,101) AS "101_Style_FullYear",
+CONVERT(VARCHAR,OrderDate,2) AS "2_2digits_Year",
+CONVERT(VARCHAR,OrderDate,102) AS "102_Style_FullYear"
+FROM Sales.SalesOrderHeader
+WHERE SalesOrderID in (43661,43668,43684);
+
+
+
+قناتنا الجديدة لاتنسى الأشتراك
+
+AlwattarIT channel
+https://www.youtube.com/c/AlwattarIT
+
+SQL Server 2019 
+-----------------------------------------
+https://www.youtube.com/watch?v=ZqcP3PU1kWw&list=PLsbhD1Fwe5drFXKCal6GcussHWAdJmMmw&index=2&t=0s
+
+HTML Playlist
+-------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5douGaq5HjhDvD7F9rsBcIWA
+
+
+Microsoft Transact SQL (T-SQL)
+-------------------------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5drf9-O0-s2-gsdvii_V0EAx
+
+
+السي شارب بأجزائه الثلاثه على قناتنا السابقة
+
+Course C#
+https://www.youtube.com/playlist?list=PL5H3smBFNEEgxWYd1-7UPG7f2HF7NjACu
+
+أسئلة مبرمجين وأجوبة من القلب
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5do8vfE5gRHDpHhBRtls957Q
+
+رابط مجموعتنا الجديدة على الفيسبوك...نرحب بالجميع
+https://bit.ly/AlwattarIT_F
+
