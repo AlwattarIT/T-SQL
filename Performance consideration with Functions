@@ -1,0 +1,66 @@
+--Add an index
+IF EXISTS (SELECT * FROM sys.indexes WHERE object_id =
+OBJECT_ID(N'[Production].[WorkOrder]')
+AND name = N'AlwattarIT_Production_StartDate')
+DROP INDEX [AlwattarIT_Production_StartDate]
+ON [Production].[WorkOrder] WITH ( ONLINE = OFF );
+GO
+CREATE NONCLUSTERED INDEX [AlwattarIT_Production_StartDate]
+ON [Production].[WorkOrder]
+([StartDate],[ProductID] ASC);
+
+
+
+--1
+SELECT [WorkOrderID]
+      ,[ProductID]
+FROM [AdventureWorks2019].[Production].[WorkOrder]
+		WHere [StartDate] >= '2011-01-01 00:00:00.000'
+		AND [StartDate] <= '2012-01-01 00:00:00.000';
+--2
+SELECT [WorkOrderID]
+      ,[ProductID]
+FROM [AdventureWorks2019].[Production].[WorkOrder]
+		WHere YEAR(StartDate) = 2011;
+
+--Drop index 
+
+USE [AdventureWorks2019]
+GO
+
+/****** Object:  Index [AlwattarIT_Production_StartDate]    Script Date: 8/10/2020 10:33:14 AM ******/
+DROP INDEX [AlwattarIT_Production_StartDate] ON [Production].[WorkOrder]
+GO
+
+
+
+قناتنا الجديدة لاتنسى الأشتراك
+
+AlwattarIT channel
+https://www.youtube.com/c/AlwattarIT
+
+SQL Server 2019 
+-----------------------------------------
+https://www.youtube.com/watch?v=ZqcP3PU1kWw&list=PLsbhD1Fwe5drFXKCal6GcussHWAdJmMmw&index=2&t=0s
+
+HTML Playlist
+-------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5douGaq5HjhDvD7F9rsBcIWA
+
+
+Microsoft Transact SQL (T-SQL)
+-------------------------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5drf9-O0-s2-gsdvii_V0EAx
+
+
+السي شارب بأجزائه الثلاثه على قناتنا السابقة
+
+Course C#
+https://www.youtube.com/playlist?list=PL5H3smBFNEEgxWYd1-7UPG7f2HF7NjACu
+
+أسئلة مبرمجين وأجوبة من القلب
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5do8vfE5gRHDpHhBRtls957Q
+
+رابط مجموعتنا الجديدة على الفيسبوك...نرحب بالجميع
+https://bit.ly/AlwattarIT_F
+
