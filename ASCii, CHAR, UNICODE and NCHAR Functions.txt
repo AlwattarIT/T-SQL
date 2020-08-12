@@ -1,0 +1,75 @@
+--Using ASCII Code Function
+
+SELECT ASCII('A'),
+ASCII('l'),
+ASCII('w'),
+ASCII('a'),
+ASCII('t'),
+ASCII('t'),
+ASCII('a'),
+ASCII('r'),
+ASCII('I'),
+ASCII('T');
+
+--Using CHAR Function
+SELECT 
+CHAR(65)+CHAR(108)+ 
+CHAR(119)+ CHAR(97)+ 
+CHAR(116)+CHAR(116)+
+CHAR(97)+CHAR(114)+
+CHAR(73)+CHAR(84) As Result;
+
+
+
+--Using UNICODE Function
+
+SELECT UNICODE('A'),
+UNICODE('l'),
+UNICODE('w'),
+UNICODE('a'),
+UNICODE('t'),
+UNICODE('t'),
+UNICODE('a'),
+UNICODE('r'),
+UNICODE('I'),
+UNICODE('T');
+
+--Using NCHAR Function
+SELECT 
+NCHAR(65)+NCHAR(108)+ 
+NCHAR(119)+ NCHAR(97)+ 
+NCHAR(116)+NCHAR(116)+
+NCHAR(97)+NCHAR(114)+
+NCHAR(73)+NCHAR(84) As Result;
+
+
+قناتنا الجديدة لاتنسى الأشتراك
+
+AlwattarIT channel
+https://www.youtube.com/c/AlwattarIT
+
+SQL Server 2019 
+-----------------------------------------
+https://www.youtube.com/watch?v=ZqcP3PU1kWw&list=PLsbhD1Fwe5drFXKCal6GcussHWAdJmMmw&index=2&t=0s
+
+HTML Playlist
+-------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5douGaq5HjhDvD7F9rsBcIWA
+
+
+Microsoft Transact SQL (T-SQL)
+-------------------------------------------------
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5drf9-O0-s2-gsdvii_V0EAx
+
+
+السي شارب بأجزائه الثلاثه على قناتنا السابقة
+
+Course C#
+https://www.youtube.com/playlist?list=PL5H3smBFNEEgxWYd1-7UPG7f2HF7NjACu
+
+أسئلة مبرمجين وأجوبة من القلب
+https://www.youtube.com/playlist?list=PLsbhD1Fwe5do8vfE5gRHDpHhBRtls957Q
+
+رابط مجموعتنا الجديدة على الفيسبوك...نرحب بالجميع
+https://bit.ly/AlwattarIT_F
+
